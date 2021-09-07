@@ -237,8 +237,14 @@
 
         <cuboid id="orange-wool" min="9,9,-69" max="16,20,-80"/>
         <cuboid id="cyan-wool" min="-112,9,-77" max="-119,20,-88"/>
+		<cuboid id="block-block1" min="-66,1,-66" max="-73,10,-59"/>
+		<cuboid id="block-block2" min="-37,1,-91" max="-31,10,-99"/>
+		<cuboid id="mid-mid" min="-56,1,-85" max="-47,12,-72"/>
         <block id="orange-spawn">12,13,-75</block>
         <block id="cyan-spawn">-116,13,-83</block>
+		<block id="block-spawner1">-69,5,-64</block>
+		<block id="block-spawner2">-35,5,-94</block>
+		<block id="gapple-mid">-52,4,-79</block>
         <rectangle id="red-spawn-exit" min="9,-78" max="-6,-71"/>
         <rectangle id="blue-spawn-exit" min="-97,-79" max="-112,-86"/>
         <cuboid id="red-spawn" min="9,0,-69" max="16,9,-80"/>
@@ -298,7 +304,6 @@
 </toolrepair>
 <itemremove>
     <item>potion</item>
-    <item>golden apple</item>
     <item>cooked beef</item>
     <item>wood</item>
     <item>nether brick</item>
@@ -324,6 +329,9 @@
     <item>sandstone:2</item>
     <item>ladder</item>
 </itemremove>
+<itemkeep>
+    <item>golden apple</item>
+</itemkeep>
 <renewables>
     <renewable interval="10s" grow="true" particles="true" sound="true" avoid-entities="true">
         <region>
@@ -387,6 +395,15 @@
     </spawner>
     <spawner id="wool-spawn" spawn-region="cyan-spawn"  player-region="cyan-wool" max-entities="50" min-delay="1s" max-delay="2s" filter="only-red">
         <item amount="1" name="Cyan Wool" material="wool:" damage="9"/>
+    </spawner>
+	<spawner spawn-region="block-spawner1"  player-region="block-block1" min-delay="9s" max-delay="14s">
+        <item amount="6" material="sandstone"/>
+    </spawner>
+	<spawner spawn-region="block-spawner2"  player-region="block-block2" min-delay="9s" max-delay="14s">
+        <item amount="6" material="sandstone"/>
+    </spawner>
+	<spawner spawn-region="gapple-mid"  player-region="mid-mid" min-delay="6s" max-delay="10s">
+        <item amount="1" material="golden apple"/>
     </spawner>
 </spawners>
 </map>
